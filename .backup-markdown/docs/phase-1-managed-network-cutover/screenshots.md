@@ -1,13 +1,6 @@
 # Phase 1 — Screenshots
 
-![Status](https://img.shields.io/badge/Status-Planned-yellow)
-![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
-![Security](https://img.shields.io/badge/Security-Sanitized%20Docs-red)
-![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
-
-## Screenshot Checklist for Cutover Evidence and Public Documentation
-
----
+## Screenshot Checklist
 
 The following screenshots should be captured and sanitized before publishing.
 

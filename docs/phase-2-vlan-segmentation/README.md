@@ -1,5 +1,15 @@
 # Phase 2 — VLAN Segmentation
 
+![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation-purple)
+![Routing](https://img.shields.io/badge/Routing-ER605-informational)
+![Switching](https://img.shields.io/badge/Switching-Managed%20PoE%20Switch-informational)
+![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
+
+## Planned VLAN Design, Subnet Layout, and Network Zone Separation
+
+---
+
 ## Status
 
 Planned

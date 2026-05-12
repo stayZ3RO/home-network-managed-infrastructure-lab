@@ -1,5 +1,14 @@
 # Configs
 
+![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
+![Security](https://img.shields.io/badge/Security-Sanitized%20Docs-red)
+![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
+
+## Sanitized Configuration Examples and Public-Safe References
+
+---
+
 This folder is used for sanitized configuration examples only.
 
 ## Folder Structure

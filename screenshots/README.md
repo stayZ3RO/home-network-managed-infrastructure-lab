@@ -1,5 +1,14 @@
 # Screenshots
 
+![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
+![Security](https://img.shields.io/badge/Security-Sanitized%20Docs-red)
+![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
+
+## Sanitized Validation Screenshots and Proof-of-Work Evidence
+
+---
+
 This folder contains sanitized screenshots used as validation evidence for the managed network infrastructure lab.
 
 ## Screenshot Categories

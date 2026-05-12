@@ -1,13 +1,5 @@
 # Phase 1 — Diagrams
 
-![Status](https://img.shields.io/badge/Status-Planned-yellow)
-![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
-![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
-
-## Physical, Logical, DNS, and Monitoring Diagram References
-
----
-
 ## Physical Topology
 
 The physical topology shows how network devices are connected.

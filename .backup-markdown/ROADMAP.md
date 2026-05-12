@@ -1,14 +1,5 @@
 # Roadmap
 
-![Status](https://img.shields.io/badge/Status-Active-blue)
-![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
-![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation-purple)
-![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
-
-## Project Roadmap for VLAN Segmentation, Firewall Policy, SSID Mapping, and Operations
-
----
-
 ## Overview
 
 This roadmap tracks the progression of the managed network infrastructure lab.

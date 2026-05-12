@@ -1,15 +1,5 @@
 # Phase 1 — Implementation
 
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
-![Routing](https://img.shields.io/badge/Routing-ER605-informational)
-![Switching](https://img.shields.io/badge/Switching-Managed%20PoE%20Switch-informational)
-![Platform](https://img.shields.io/badge/Platform-Proxmox-orange)
-
-## Implementation Steps for the Router, Switch, AP Mode, and Core Services Cutover
-
----
-
 ## Objective
 
 Implement the managed network foundation by cutting over from the previous consumer router-based topology to a dedicated router, managed switch, and AP-mode wireless design.

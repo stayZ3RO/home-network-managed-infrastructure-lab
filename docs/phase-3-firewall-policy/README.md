@@ -1,5 +1,15 @@
 # Phase 3 — Firewall Policy
 
+![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Phase](https://img.shields.io/badge/Phase-3%20Firewall%20Policy-purple)
+![Security](https://img.shields.io/badge/Security-Sanitized%20Docs-red)
+![Routing](https://img.shields.io/badge/Routing-ER605-informational)
+![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
+
+## Planned Inter-VLAN Access Rules and Traffic Control Policy
+
+---
+
 ## Status
 
 Planned

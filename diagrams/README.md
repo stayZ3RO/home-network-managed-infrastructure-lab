@@ -1,5 +1,13 @@
 # Architecture Diagrams
 
+![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
+![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
+
+## Physical, Logical, DNS, Monitoring, and VLAN Design Diagrams
+
+---
+
 This folder contains architecture diagrams for the managed network infrastructure lab.
 
 ## Planned Diagrams

@@ -1,15 +1,5 @@
 # Phase 1 — Managed Router/Switch Cutover and Baseline Validation
 
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
-![Routing](https://img.shields.io/badge/Routing-ER605-informational)
-![Switching](https://img.shields.io/badge/Switching-Managed%20PoE%20Switch-informational)
-![DNS](https://img.shields.io/badge/DNS-Pi--hole%20HA-purple)
-
-## Overview of the Completed Managed Network Cutover
-
----
-
 ## Overview
 
 Phase 1 focused on migrating the home network from a consumer mesh/router-controlled design to a managed network foundation using a dedicated router/firewall, managed switch, Omada Controller, and access points operating in AP mode.

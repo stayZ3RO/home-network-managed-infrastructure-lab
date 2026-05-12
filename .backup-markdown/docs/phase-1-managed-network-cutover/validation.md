@@ -1,15 +1,5 @@
 # Phase 1 — Validation
 
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
-![DNS](https://img.shields.io/badge/DNS-Pi--hole%20HA-purple)
-![Platform](https://img.shields.io/badge/Platform-Proxmox-orange)
-![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
-
-## Post-Cutover Validation for DNS, DHCP, Internet, Monitoring, and Remote Access
-
----
-
 ## Objective
 
 Validate that the managed network cutover was successful and that all core services remained operational after moving to the ER605 router, managed switch, and AP-mode wireless design.

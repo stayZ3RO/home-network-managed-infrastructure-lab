@@ -1,15 +1,13 @@
 # Home Network Managed Infrastructure Lab
 
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Status](https://img.shields.io/badge/Status-Phase%201%20Complete-brightgreen)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
-![Routing](https://img.shields.io/badge/Routing-ER605-informational)
+![Routing](https://img.shields.io/badge/Routing-TP--Link%20ER605-informational)
 ![Switching](https://img.shields.io/badge/Switching-Managed%20PoE%20Switch-informational)
 ![DNS](https://img.shields.io/badge/DNS-Pi--hole%20HA-purple)
 ![Platform](https://img.shields.io/badge/Platform-Proxmox-orange)
 
 ## Managed Router/Switch Cutover, Omada SDN, AP Mode, and VLAN-Ready Network Foundation
-
----
 
 This repository documents Project 2 of my home network infrastructure lab: the migration from a consumer mesh/router-controlled network to a managed network foundation using a dedicated router/firewall, managed switch, Omada SDN Controller, AP-mode wireless, redundant DNS, Proxmox-hosted services, and monitoring validation.
 
