@@ -18,158 +18,71 @@ Validate that the managed network cutover was successful and that all core servi
 
 ## Validation Summary
 
-| Test | Status | Notes |
+| Test | Status | Evidence |
 |---|---:|---|
-| Internet access | Passed | Clients were able to reach external websites |
-| DHCP assignment | Passed | Clients received valid LAN IP addresses |
-| DNS resolution | Passed | DNS resolved through the Pi-hole virtual IP |
-| Pi-hole primary node | Passed | Primary DNS node reachable |
-| Pi-hole secondary node | Passed | Secondary DNS node reachable |
-| DNS failover | Passed | Keepalived VIP remained functional |
-| Unbound recursion | Passed | Recursive DNS remained operational |
-| Proxmox access | Passed | Proxmox host reachable |
-| Monitoring access | Passed | Grafana/Prometheus reachable |
-| Omada Controller | Passed | Controller reachable and managing devices |
-| Managed switch | Passed | Switch online and passing traffic |
-| Deco AP mode | Passed | Wireless clients connected successfully |
-| Remote access | Passed | Remote management path remained available |
+| ER605 WAN online | ✅ Passed | [ER605 WAN Online](../../screenshots/phase-1-managed-network-cutover/02-er605-wan-online.png) |
+| ER605 DHCP configuration | ✅ Passed | [ER605 LAN DHCP Configuration](../../screenshots/phase-1-managed-network-cutover/03-er605-lan-dhcp-config.png) |
+| DHCP reservations | ✅ Passed | [ER605 Address Reservations](../../screenshots/phase-1-managed-network-cutover/04-er605-address-reservations.png) |
+| Managed switch online | ✅ Passed | [Managed Switch Online in Omada](../../screenshots/phase-1-managed-network-cutover/05-managed-switch-online-in-omada.png) |
+| Switch port map | ✅ Passed | [Managed Switch Port Map](../../screenshots/phase-1-managed-network-cutover/06-managed-switch-port-map.png) |
+| PoE status for Pi nodes | ✅ Passed | [PoE Status for Pi Nodes](../../screenshots/phase-1-managed-network-cutover/07-poe-status-pi-nodes.png) |
+| Wired client DHCP | ✅ Passed | [Wired Client DHCP from ER605](../../screenshots/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png) |
+| Wireless client DHCP | ✅ Passed | [Wi-Fi Client DHCP from ER605](../../screenshots/phase-1-managed-network-cutover/11-wifi-client-dhcp-from-er605.png) |
+| DNS through Pi-hole VIP | ✅ Passed | [DNS Validation Through Pi-hole VIP](../../screenshots/phase-1-managed-network-cutover/12-dns-validation-pi-hole-vip.png) |
+| Pi-hole query visibility | ✅ Passed | [Pi-hole Queries After Cutover](../../screenshots/phase-1-managed-network-cutover/13-pihole-queries-after-cutover.png) |
+| HA DNS VIP reachability | ✅ Passed | [HA DNS VIP Reachable After Cutover](../../screenshots/phase-1-managed-network-cutover/14-ha-dns-vip-reachable-after-cutover.png) |
+| Proxmox access | ✅ Passed | [Proxmox Access After Cutover](../../screenshots/phase-1-managed-network-cutover/15-proxmox-access-after-cutover.png) |
+| Grafana access | ✅ Passed | [Grafana Access After Cutover](../../screenshots/phase-1-managed-network-cutover/16-grafana-access-after-cutover.png) |
+| Omada Controller access | ✅ Passed | [Omada Controller After Cutover](../../screenshots/phase-1-managed-network-cutover/17-omada-controller-after-cutover.png) |
+| RustDesk access | ✅ Passed | [RustDesk Access After Cutover](../../screenshots/phase-1-managed-network-cutover/18-rustdesk-access-after-cutover.png) |
+| Final Omada topology/client visibility | ✅ Passed | [Final Omada Topology and Client List](../../screenshots/phase-1-managed-network-cutover/20-final-omada-topology-client-list.png) |
 
 ---
 
 ## Client Network Validation
 
-### DHCP Lease Check
+### Wired Client
 
-Validated that clients received valid network configuration.
+The wired client test confirmed that clients connected to the managed switch received DHCP from the ER605-controlled network.
 
-Expected:
+Evidence:
 
-```text
-IP Address: LAN subnet address
-Gateway: ER605 LAN IP
-DNS: Pi-hole virtual IP
-```
-
-Example Windows validation:
-
-```powershell
-ipconfig /all
-```
-
-Example Linux/macOS validation:
-
-```bash
-ip addr
-ip route
-cat /etc/resolv.conf
-```
+[Wired Client DHCP from ER605](../../screenshots/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png)
 
 ---
 
-## Internet Connectivity Test
+### Wireless Client
 
-Validated external connectivity using ping and browser tests.
+The wireless client test confirmed that Wi-Fi clients connected through Deco AP mode also received DHCP from the ER605-controlled network.
 
-```bash
-ping 1.1.1.1
-ping google.com
-```
+Evidence:
 
-Passing result:
-
-- IP-based ping worked
-- DNS-based ping worked
-- Browser access worked
+[Wi-Fi Client DHCP from ER605](../../screenshots/phase-1-managed-network-cutover/11-wifi-client-dhcp-from-er605.png)
 
 ---
 
-## DNS Resolution Test
+## DNS Validation
 
-Validated DNS resolution through Pi-hole.
+DNS was validated through the Pi-hole HA virtual IP.
 
-```bash
-nslookup google.com
-nslookup github.com
-```
+Evidence:
 
-Expected result:
-
-- Queries resolve successfully
-- DNS server points to the Pi-hole virtual IP
-- Pi-hole dashboard shows active client queries
+- [DNS Validation Through Pi-hole VIP](../../screenshots/phase-1-managed-network-cutover/12-dns-validation-pi-hole-vip.png)
+- [Pi-hole Queries After Cutover](../../screenshots/phase-1-managed-network-cutover/13-pihole-queries-after-cutover.png)
+- [HA DNS VIP Reachable After Cutover](../../screenshots/phase-1-managed-network-cutover/14-ha-dns-vip-reachable-after-cutover.png)
 
 ---
 
-## Pi-hole Validation
+## Infrastructure Validation
 
-Validated both DNS nodes:
+Core infrastructure services remained reachable after the cutover.
 
-- Primary Pi-hole reachable
-- Secondary Pi-hole reachable
-- Virtual IP reachable
-- Queries visible in Pi-hole dashboard
-- Blocklists active
-- DNS recursion still working through Unbound
+Evidence:
 
----
-
-## Keepalived VIP Validation
-
-Validated that the DNS virtual IP remained available after the network cutover.
-
-Expected path:
-
-```text
-Client DNS → Pi-hole VIP → Active Pi-hole node
-```
-
-Validation commands:
-
-```bash
-ping <PIHOLE_VIP>
-nslookup google.com <PIHOLE_VIP>
-```
-
----
-
-## Proxmox Validation
-
-Validated that the Proxmox host remained reachable after the cutover.
-
-Checks performed:
-
-- Proxmox web UI reachable
-- Existing VMs/LXCs reachable
-- Omada Controller reachable
-- Monitoring VM reachable
-
----
-
-## Monitoring Validation
-
-Validated that monitoring services remained online.
-
-Checks performed:
-
-- Grafana dashboard accessible
-- Prometheus accessible
-- Blackbox targets reporting
-- Alerting stack online
-- Core infrastructure targets visible
-
----
-
-## Wireless Validation
-
-Validated that wireless clients connected successfully after Deco was moved to AP mode.
-
-Checks performed:
-
-- Clients connected to Wi-Fi
-- Clients received DHCP leases from the ER605-controlled network
-- Internet access worked
-- DNS resolution worked
-- No double NAT from Deco router mode
+- [Proxmox Access After Cutover](../../screenshots/phase-1-managed-network-cutover/15-proxmox-access-after-cutover.png)
+- [Grafana Access After Cutover](../../screenshots/phase-1-managed-network-cutover/16-grafana-access-after-cutover.png)
+- [Omada Controller After Cutover](../../screenshots/phase-1-managed-network-cutover/17-omada-controller-after-cutover.png)
+- [RustDesk Access After Cutover](../../screenshots/phase-1-managed-network-cutover/18-rustdesk-access-after-cutover.png)
 
 ---
 
@@ -177,6 +90,6 @@ Checks performed:
 
 The Phase 1 managed network cutover was successful.
 
-Core infrastructure remained stable after the migration, including DNS, DHCP, wireless access, Proxmox services, monitoring, and remote access.
+Core infrastructure remained stable after the migration, including DHCP, DNS, Pi-hole HA DNS, Proxmox services, Grafana monitoring, Omada management, wireless access, and RustDesk remote access.
 
 The network is now ready for Phase 2: VLAN segmentation.

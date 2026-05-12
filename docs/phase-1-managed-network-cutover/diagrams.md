@@ -1,6 +1,6 @@
 # Phase 1 — Diagrams
 
-![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
@@ -8,60 +8,68 @@
 
 ---
 
-## Physical Topology
+## Overview
 
-The physical topology shows how network devices are connected.
+This document links Phase 1 architecture diagrams for the managed network cutover.
+
+The diagrams should make the network easy to understand without requiring access to the actual environment.
+
+---
+
+## Diagram Evidence Table
+
+| Diagram | Status | Purpose |
+|---|---:|---|
+| `diagrams/phase-1-managed-network-cutover/physical-topology.png` | ⏳ Pending | Shows ISP handoff, AT&T Gateway, ER605, managed switch, APs, and infrastructure devices. |
+| `diagrams/phase-1-managed-network-cutover/logical-topology.png` | ⏳ Pending | Shows routing, DNS, DHCP, monitoring, and management relationships. |
+| `diagrams/phase-1-managed-network-cutover/dns-resolution-flow.png` | ⏳ Pending | Shows client DNS path through Pi-hole VIP, active Pi-hole node, and Unbound. |
+| `diagrams/phase-1-managed-network-cutover/monitoring-flow.png` | ⏳ Pending | Shows Prometheus, Grafana, Alertmanager, and alerting flow. |
+
+---
+
+## Diagram Gallery
+
+No diagrams are currently linked. Add diagrams to `diagrams/phase-1-managed-network-cutover/` when ready.
+
+---
+
+## Physical Topology
 
 ```text
 Internet
    |
 ONT
    |
-AT&T Gateway
+AT&T Gateway / IP Passthrough
    |
-ER605 Router
+TP-Link ER605 Router
    |
-TL-SG2210P Managed Switch
+TP-Link TL-SG2210P Managed Switch
    |
-   |-- Deco AP 1
-   |-- Deco AP 2
-   |-- Deco AP 3
+   |-- Deco APs
    |-- Proxmox Host
    |-- Primary Pi-hole
    |-- Secondary Pi-hole
    |-- Wired Clients
-```
-
-Recommended file:
-
-```text
-assets/diagrams/phase-1/physical-topology.png
+   |-- Wireless Clients
 ```
 
 ---
 
-## Logical Topology
-
-The logical topology shows how services interact.
+## DNS Resolution Flow
 
 ```text
-Clients
+Client Device
    |
-ER605 DHCP / Gateway
+ER605 DHCP-Provided DNS
    |
-Pi-hole VIP
+Pi-hole HA VIP
    |
 Active Pi-hole Node
    |
-Unbound Recursive DNS
+Unbound Recursive Resolver
    |
 Internet DNS Resolution
-```
-
-Recommended file:
-
-```text
-assets/diagrams/phase-1/logical-topology.png
 ```
 
 ---
@@ -69,9 +77,9 @@ assets/diagrams/phase-1/logical-topology.png
 ## Monitoring Flow
 
 ```text
-Prometheus
+Infrastructure Targets
    |
-Scrapes Targets
+Prometheus / Blackbox Exporter
    |
 Grafana Dashboards
    |
@@ -80,24 +88,10 @@ Alertmanager
 Discord Alerts
 ```
 
-Recommended file:
-
-```text
-assets/diagrams/phase-1/monitoring-flow.png
-```
-
 ---
 
-## Diagram Goals
+## Diagram Folder
 
-The diagrams should clearly show:
-
-- ISP handoff
-- AT&T Gateway IP Passthrough
-- ER605 as main router/firewall
-- TL-SG2210P as managed switch
-- Deco operating as APs
-- Pi-hole DNS redundancy
-- Proxmox infrastructure services
-- Monitoring visibility
-- Future VLAN-ready foundation
+```text
+diagrams/phase-1-managed-network-cutover/
+```
