@@ -294,3 +294,15 @@ Planned work includes:
 ## Goal
 
 To build and document a realistic managed home network infrastructure lab that demonstrates routing, switching, DNS, monitoring, virtualization, secure administration, and future VLAN-based segmentation.
+
+---
+
+## Related Infrastructure Labs
+
+This repository is part of a broader infrastructure lab portfolio.
+
+| Repository | Focus | Relationship |
+|---|---|---|
+| [Home Network Infrastructure Lab](https://github.com/stayZ3RO/home-network-infrastructure-HA-DNS) | HA DNS, Pi-hole, Unbound, monitoring, Tailscale, Proxmox, RustDesk | Provides the core infrastructure foundation used by this project |
+| [Home Network Managed Infrastructure Lab](https://github.com/stayZ3RO/home-network-managed-infrastructure-lab) | Managed router, switching, VLANs, firewall policy, network segmentation | Expands the home lab into managed network infrastructure |
+| [VPS Cloud Infrastructure Lab](https://github.com/stayZ3RO/vps-cloud-infra-lab) | Linux VPS hardening, Docker, DNS, HTTPS, monitoring, backups, secure access | Extends infrastructure operations into cloud-hosted services |
