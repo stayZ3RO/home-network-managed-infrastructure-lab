@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment/secrets
+.env
+*.env
+*.key
+*.pem
+*.crt
+
+# Backups/exports
+*.backup
+*.bak
+*.tar
+*.tar.gz
+*.zip
+
+# Sensitive network exports
+configs/private/
+configs/raw/
+*.ovpn
+*.conf.private
+
+# Logs
+*.log
+
+# Editor files
+.vscode/
+.idea/
