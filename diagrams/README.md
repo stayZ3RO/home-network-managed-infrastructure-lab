@@ -10,16 +10,17 @@
 
 This folder contains architecture diagrams for the managed network infrastructure lab.
 
-## Planned Diagrams
+## Diagrams
 
 | Diagram | Status |
 |---|---:|
-| Phase 1 - Physical Topology | Planned |
-| Phase 1 - Logical Topology | Planned |
-| Phase 1 - DNS Resolution Flow | Planned |
-| Phase 1 - Monitoring Flow | Planned |
+| [Current Topology (Omada, flat)](current-topology.md) | Done |
+| Target Topology (UniFi) | Planned — with the router/switch migration |
 | Phase 2 - VLAN Segmentation Design | Planned |
 | Phase 3 - Firewall Policy Flow | Planned |
+
+Diagrams are authored as Mermaid inside Markdown so they render on GitHub,
+stay in version control, and can be edited without a drawing tool.
 
 ## Notes
 

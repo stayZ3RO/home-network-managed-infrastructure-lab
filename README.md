@@ -173,10 +173,8 @@ Proxmox / Omada / Pi-hole / Monitoring Services
 
 | Diagram | Status | Link |
 |---|---:|---|
-| Phase 1 - Physical Topology | Planned | [View](diagrams/phase-1-managed-network-cutover/) |
-| Phase 1 - Logical Topology | Planned | [View](diagrams/phase-1-managed-network-cutover/) |
-| Phase 1 - DNS Resolution Flow | Planned | [View](diagrams/phase-1-managed-network-cutover/) |
-| Phase 1 - Monitoring Flow | Planned | [View](diagrams/phase-1-managed-network-cutover/) |
+| Current Topology (Omada, flat) | Done | [View](diagrams/current-topology.md) |
+| Target Topology (UniFi) | Planned | with the router/switch migration |
 | Phase 2 - VLAN Segmentation Design | Planned | Coming soon |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
