@@ -1,4 +1,4 @@
-# Phase 2 — VLAN Segmentation
+# Phase 2: VLAN Segmentation
 
 ![Status](https://img.shields.io/badge/Status-Planned-yellow)
 ![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation-purple)

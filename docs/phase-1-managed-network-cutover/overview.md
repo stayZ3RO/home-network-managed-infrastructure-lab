@@ -1,4 +1,4 @@
-# Phase 1 — Managed Router/Switch Cutover and Baseline Validation
+# Phase 1: Managed Router/Switch Cutover and Baseline Validation
 
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)

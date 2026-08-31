@@ -1,4 +1,4 @@
-# Phase 1 — Screenshots
+# Phase 1: Screenshots
 
 ![Status](https://img.shields.io/badge/Status-Evidence%20Linked-brightgreen)
 ![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)

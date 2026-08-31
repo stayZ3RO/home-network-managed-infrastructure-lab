@@ -1,4 +1,4 @@
-# Phase 4 — Wireless SSID Mapping
+# Phase 4: Wireless SSID Mapping
 
 ![Status](https://img.shields.io/badge/Status-Planned-yellow)
 ![Phase](https://img.shields.io/badge/Phase-4%20SSID%20Mapping-purple)

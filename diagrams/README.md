@@ -15,7 +15,7 @@ This folder contains architecture diagrams for the managed network infrastructur
 | Diagram | Status |
 |---|---:|
 | [Current Topology (Omada, flat)](current-topology.md) | Done |
-| Target Topology (UniFi) | Planned — with the router/switch migration |
+| Target Topology (UniFi) | Planned, with the router/switch migration |
 | Phase 2 - VLAN Segmentation Design | Planned |
 | Phase 3 - Firewall Policy Flow | Planned |
 
