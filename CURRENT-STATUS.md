@@ -5,7 +5,7 @@
 ![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
-## Phase 1 Complete — Managed Network Baseline Ready for VLAN Segmentation
+## Phase 1 Complete: Managed Network Baseline Ready for VLAN Segmentation
 
 ---
 
